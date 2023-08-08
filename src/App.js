@@ -28,20 +28,23 @@ function App() {
   return (
    
     <div className="App">
-      <h1 className='appName'>Foodie Blinders <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-egg-fill" viewBox="0 0 16 16">
+      <h1 className='appName'>F<span>oo</span>die <i>B</i>linders <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-egg-fill" viewBox="0 0 16 16">
   <path d="M14 10a6 6 0 0 1-12 0C2 5.686 5 0 8 0s6 5.686 6 10z"/>
 </svg></h1>
+
+<p>search any cuisine or dish you want to eat and learn how to cook it.</p>
+
       <form className='formSearch' onSubmit={submit}>
         <div className='form-group'>
-        <input type="text" className='inputApp form-control' placeholder='Enter your fav dish' value={query} onChange={(e)=> setquery(e.target.value)}/>
-          <input type="submit" className='submitApp btn ' value="Search" />
+        <input type="text" className='inputApp ' placeholder='enter dish name' value={query} onChange={(e)=> setquery(e.target.value)}/>
+          <input type="submit" className='submitBtn ' value="Search" />
         </div>
 
       </form>
 
       <div className='recipiesApp'>
-        {recipes.map((recipe) => {
-         return <RecipeTile recipe={recipe}/>;
+        {recipes.map((recipe,i) => {
+         return <RecipeTile key={i} recipe={recipe}/>;
         })}
       </div>
     </div>

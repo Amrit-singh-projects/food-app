@@ -6,7 +6,7 @@ export default function RecipeTile({recipe}) {
     <div className="recipeTile" onClick={()=>{
         window.open(recipe["recipe"]["url"]);
     }}>
-        <img className="recipeTile_img" src={recipe["recipe"]["image"]}/>
+        <img className="recipeTile_img" src={recipe["recipe"]["image"]} alt='not found'/>
          <p className="recipeTile_name">{recipe["recipe"]["label"]}</p>
     </div>
     
