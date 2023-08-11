@@ -42,7 +42,16 @@
   margin-top: 25px;
   display: grid;
   grid-template-columns: 230px 230px;
-  align-items: baseline;
+  /* align-items: baseline; */
+  align-items: center; 
+  justify-content: center; 
+}
+@media (max-width: 768px) {
+  .recipiesApp {
+    grid-template-columns: 1fr; 
+    /* justify-content: center;     */
+  }
+ 
 }
 .form-group{
   display: flex;
